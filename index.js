@@ -1,10 +1,10 @@
 #!/usr/bin/env node
 
-import fs from 'fs'
-import recursive from 'recursive-readdir-sync'
-import {minify} from 'uglify-js'
-import {exec} from 'child_process'
-import cleanCss from 'clean-css'
+const fs = require('fs')
+const recursive = require('recursive-readdir-sync')
+const {minify} = require('uglify-js')
+const {exec} = require('child_process')
+const cleanCss = require('clean-css')
 
 function createFolderIfNone(dirName) {
 	if (!fs.existsSync(dirName)){

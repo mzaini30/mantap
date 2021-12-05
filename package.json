@@ -1,6 +1,6 @@
 {
   "name": "mantap",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Tools untuk mengoptimalkan assets buat blog",
   "main": "index.js",
   "scripts": {
@@ -9,7 +9,6 @@
   "bin": {
     "mantap": "./index.js"
   },
-  "type": "module",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/mzaini30/mantap.git"
