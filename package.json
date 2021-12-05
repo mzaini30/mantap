@@ -23,6 +23,7 @@
   "homepage": "https://github.com/mzaini30/mantap#readme",
   "dependencies": {
     "fs-extra": "^10.0.0",
-    "recursive-readdir-sync": "^1.0.6"
+    "recursive-readdir-sync": "^1.0.6",
+    "uglify-js": "^3.14.4"
   }
 }

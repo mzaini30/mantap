@@ -2,6 +2,7 @@
 
 import fs from 'fs-extra'
 import recursive from 'recursive-readdir-sync'
+import {minify} from 'uglify-js'
 
 function createFolderIfNone(dirName) {
 	if (!fs.existsSync(dirName)){
@@ -10,19 +11,18 @@ function createFolderIfNone(dirName) {
 }
 
 createFolderIfNone('./build')
-fs.copy('./src', './build')
+fs.copy('./src', './build').then(() => jalankan())
 
-const files = recursive('build')
+function jalankan(){
+	const files = recursive('build')
 
-let fileJs = [...files].filter(x => x.includes('.js'))
-let fileCss = [...files].filter(x => x.includes('.css'))
-let fileGambar = [...files].filter(x => {
-	return x.includes('.jpg') 
-		|| x.includes('.JPG')
-		|| x.includes('.jpeg')
-		|| x.includes('.JPEG')
-		|| x.includes('.png')
-		|| x.includes('.PNG')
-})
+	const fileJs = [...files].filter(x => x.match(/\.js$/))
+	const fileCss = [...files].filter(x => x.match(/\.css$/))
+	const fileGambar = [...files].filter(x => x.match(/\.(jpg|jpeg|png)$/i))
 
-console.log(fileCss)
+	for (let x of fileJs){
+		let filenya = fs.readFileSync(x, 'utf8')
+		filenya = minify(filenya)
+		fs.writeFileSync(x, filenya.code, 'utf8')
+	}
+}

@@ -3,10 +3,12 @@ lockfileVersion: 5.3
 specifiers:
   fs-extra: ^10.0.0
   recursive-readdir-sync: ^1.0.6
+  uglify-js: ^3.14.4
 
 dependencies:
   fs-extra: 10.0.0
   recursive-readdir-sync: 1.0.6
+  uglify-js: 3.14.4
 
 packages:
 
@@ -33,6 +35,12 @@ packages:
 
   /recursive-readdir-sync/1.0.6:
     resolution: {integrity: sha1-Hb9tMvPFu4083pemxYjVR6nhPVY=}
+    dev: false
+
+  /uglify-js/3.14.4:
+    resolution: {integrity: sha512-AbiSR44J0GoCeV81+oxcy/jDOElO2Bx3d0MfQCUShq7JRXaM4KtQopZsq2vFv8bCq2yMaGrw1FgygUd03RyRDA==}
+    engines: {node: '>=0.8.0'}
+    hasBin: true
     dev: false
 
   /universalify/2.0.0:
