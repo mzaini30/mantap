@@ -10,11 +10,9 @@ Tools untuk optimasi CSS, JS, dan gambar-gambar supaya websitenya wuzz wuzz...
 
 Install Node JS
 
-Install pnpm dengan perintah: `npm i -g pnpm`
-
 ## Instalasi
 
-Jalankan: `pnpm i -g mantap`
+Jalankan: `npm i -g mantap`
 
 ## Menjalankan
 

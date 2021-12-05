@@ -5,6 +5,7 @@ const recursive = require('recursive-readdir-sync')
 const {minify} = require('uglify-js')
 const {exec} = require('child_process')
 const cleanCss = require('clean-css')
+const sharp = require('sharp')
 
 function createFolderIfNone(dirName) {
 	if (!fs.existsSync(dirName)){
@@ -33,5 +34,6 @@ for (let x of fileCss){
 }
 
 for (let x of fileGambar){
-	exec(`sharp -i '${x}' -o ./build -f webp`)
+	let file = x.split('/').reverse()[0]
+	sharp(x).toFile(`build/${file.replace(/\..+$/, '.webp')}`)
 }

@@ -1,6 +1,6 @@
 {
   "name": "mantap",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Tools untuk mengoptimalkan assets buat blog",
   "main": "index.js",
   "scripts": {
@@ -23,7 +23,7 @@
   "dependencies": {
     "clean-css": "^5.2.2",
     "recursive-readdir-sync": "^1.0.6",
-    "sharp-cli": "^1.15.0",
+    "sharp": "^0.29.3",
     "uglify-js": "^3.14.4"
   }
 }
