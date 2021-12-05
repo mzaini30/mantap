@@ -18,6 +18,7 @@ const files = recursive('src')
 
 const fileJs = [...files].filter(x => x.match(/\.js$/))
 const fileCss = [...files].filter(x => x.match(/\.css$/))
+const fileGambar = [...files].filter(x => x.match(/\.(png|jpg|jpeg)$/i))
 
 for (let x of fileJs){
 	let filenya = fs.readFileSync(x, 'utf8')
@@ -31,4 +32,6 @@ for (let x of fileCss){
 	fs.writeFileSync(x.replace('src', 'build'), filenya.styles, 'utf8')
 }
 
-exec("sharp -i './src/**/*.*' -o ./build -f webp")
+for (let x of fileGambar){
+	exec(`sharp -i '${x}' -o ./build -f webp`)
+}

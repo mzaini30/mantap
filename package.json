@@ -1,6 +1,6 @@
 {
   "name": "mantap",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Tools untuk mengoptimalkan assets buat blog",
   "main": "index.js",
   "scripts": {
