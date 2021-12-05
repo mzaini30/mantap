@@ -1,0 +1,28 @@
+{
+  "name": "mantap",
+  "version": "1.0.0",
+  "description": "Tools untuk mengoptimalkan assets buat blog",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "mantap": "./index.js"
+  },
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mzaini30/mantap.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mzaini30/mantap/issues"
+  },
+  "homepage": "https://github.com/mzaini30/mantap#readme",
+  "dependencies": {
+    "fs-extra": "^10.0.0",
+    "recursive-readdir-sync": "^1.0.6"
+  }
+}
