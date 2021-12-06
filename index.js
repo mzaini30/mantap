@@ -6,6 +6,7 @@ const {minify} = require('uglify-js')
 const {exec} = require('child_process')
 const cleanCss = require('clean-css')
 const sharp = require('sharp')
+const {platform} = require('process')
 
 function createFolderIfNone(dirName) {
 	if (!fs.existsSync(dirName)){
@@ -34,6 +35,15 @@ for (let x of fileCss){
 }
 
 for (let x of fileGambar){
-	let file = x.split('/').reverse()[0]
-	sharp(x).toFile(`build/${file.replace(/\..+$/, '.webp')}`)
+	if (platform == 'linux') {
+
+		let file = x.split('/').reverse()[0]
+		sharp(x).toFile(`build/${file.replace(/\..+$/, '.webp')}`)
+
+	} else if (platform == 'win32'){
+
+		let file = x.split('\\').reverse()[0]
+		sharp(x).toFile(`build\\${file.replace(/\..+$/, '.webp')}`)
+
+	}
 }
