@@ -1,15 +1,13 @@
 {
   "name": "mantap",
-  "version": "0.0.7",
+  "version": "0.0.8",
+  "type": "module",
   "description": "Tools untuk mengoptimalkan assets buat blog",
-  "main": "index.js",
   "scripts": {
-    "build": "unbuild",
-    "prepublishOnly": "npm run build",
     "release": "bumpp --push --commit --tag"
   },
   "bin": {
-    "mantap": "dist/index.js.mjs"
+    "mantap": "source/index.js"
   },
   "repository": {
     "type": "git",
@@ -22,12 +20,13 @@
     "url": "https://github.com/mzaini30/mantap/issues"
   },
   "homepage": "https://github.com/mzaini30/mantap#readme",
-  "devDependencies": {
-    "bumpp": "^7.1.1",
+  "dependencies": {
     "clean-css": "^5.2.2",
     "recursive-readdir-sync": "^1.0.6",
     "sharp": "^0.29.3",
-    "uglify-js": "^3.14.4",
-    "unbuild": "^0.7.4"
+    "uglify-js": "^3.14.4"
+  },
+  "devDependencies": {
+    "bumpp": "^7.1.1"
   }
 }
