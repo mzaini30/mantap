@@ -14,8 +14,6 @@ function createFolderIfNone(dirName) {
 	}
 }
 
-createFolderIfNone('./build')
-
 const files = recursive('src')
 
 const fileJs = [...files].filter(x => x.match(/\.js$/))
